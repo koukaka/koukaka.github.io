@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href>
   <title>Java多线程 | Koukaka的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java多线程创建线程的主要三种形式1. 通过继承Thread接口 不适合资源共享  12345678910111213public class Mythread1 extends Thread&amp;#123;	@Override	public void run()&amp;#123;		for(int i=0; i&amp;lt;30; i++)&amp;#123;			System.out.println(&amp;quot;t">
+  <meta name="description" content="Java多线程创建线程的主要三种形式1. 通过继承Thread接口 不适合资源共享">
 <meta name="keywords" content="学习,Java,多线程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java多线程">
 <meta property="og:url" content="/2019/07/05/Java多线程/index.html">
 <meta property="og:site_name" content="Koukaka的博客">
-<meta property="og:description" content="Java多线程创建线程的主要三种形式1. 通过继承Thread接口 不适合资源共享  12345678910111213public class Mythread1 extends Thread&amp;#123;	@Override	public void run()&amp;#123;		for(int i=0; i&amp;lt;30; i++)&amp;#123;			System.out.println(&amp;quot;t">
+<meta property="og:description" content="Java多线程创建线程的主要三种形式1. 通过继承Thread接口 不适合资源共享">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-05T07:58:27.228Z">
+<meta property="og:updated_time" content="2019-07-05T08:01:33.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java多线程">
-<meta name="twitter:description" content="Java多线程创建线程的主要三种形式1. 通过继承Thread接口 不适合资源共享  12345678910111213public class Mythread1 extends Thread&amp;#123;	@Override	public void run()&amp;#123;		for(int i=0; i&amp;lt;30; i++)&amp;#123;			System.out.println(&amp;quot;t">
+<meta name="twitter:description" content="Java多线程创建线程的主要三种形式1. 通过继承Thread接口 不适合资源共享">
   
     <link rel="alternative" href="/atom.xml" title="Koukaka的博客" type="application/atom+xml">
   
@@ -167,6 +167,7 @@
         <h1 id="Java多线程"><a href="#Java多线程" class="headerlink" title="Java多线程"></a>Java多线程</h1><h2 id="创建线程的主要三种形式"><a href="#创建线程的主要三种形式" class="headerlink" title="创建线程的主要三种形式"></a>创建线程的主要三种形式</h2><h3 id="1-通过继承Thread接口"><a href="#1-通过继承Thread接口" class="headerlink" title="1. 通过继承Thread接口"></a>1. 通过继承Thread接口</h3><ul>
 <li>不适合资源共享</li>
 </ul>
+<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class Mythread1 extends Thread&#123;</span><br><span class="line">	@Override</span><br><span class="line">	public void run()&#123;</span><br><span class="line">		for(int i=0; i&lt;30; i++)&#123;</span><br><span class="line">			System.out.println(&quot;thread1-----No.&quot;+i);</span><br><span class="line">		&#125;</span><br><span class="line">		try &#123;</span><br><span class="line">			Thread.sleep(100L);</span><br><span class="line">		&#125; catch (InterruptedException e)&#123;</span><br><span class="line">				e.printStackTrace();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <h3 id="2-通过实现Runnable接口"><a href="#2-通过实现Runnable接口" class="headerlink" title="2. 通过实现Runnable接口"></a>2. 通过实现Runnable接口</h3><ul>
@@ -470,18 +471,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">学习</a>
               </li>
              
@@ -491,6 +480,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">搭建博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
