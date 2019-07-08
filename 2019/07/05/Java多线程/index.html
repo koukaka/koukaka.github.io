@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Koukaka的博客">
 <meta property="og:description" content="Java多线程创建线程的主要三种形式1. 通过继承Thread接口 不适合资源共享">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-05T08:01:33.884Z">
+<meta property="og:updated_time" content="2019-07-08T00:56:40.353Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java多线程">
 <meta name="twitter:description" content="Java多线程创建线程的主要三种形式1. 通过继承Thread接口 不适合资源共享">
@@ -213,11 +213,45 @@
 <li>如果一个操作happens-before另一个操作，那么第一个操作的执行结果将对第二个操作可见，而且第一个操作的执行顺序排在第二个操作之前。</li>
 </ol>
 </li>
-<li><p>synchronized:<br>  该方法是无法继承的，它只会锁定一个对象，而非某一段程序块<br>  当没有明确对象作为对象锁时，可以创建一个instance对象，充当对象锁。可以采用创建一个零字节的数组：<br>  <code>private byte[] lock = new byte[0];</code></p>
-  <table><br>      <tr><br>          <td>分类</td><br>          <td>具体分类</td><br>          <td>被锁对象</td><br>          <td>举例</td><br>      </tr><br>      <tr><br>          <td rowspan="2">方法</td><br>          <td>实例方法</td><br>          <td>类的实例对象</td><br>          <td> <code>public synchronized void method(){......}</code></td><br>      </tr><br>      <tr><br>          <td>静态方法</td><br>          <td>类对象</td><br>          <td> <code>public static synchronized void method(){......}</code></td><br>      </tr><br>      <tr><br>          <td rowspan="3">代码块</td><br>          <td>实例对象</td><br>          <td>类的实例对象</td><br>          <td> <code>synchronized (this){......}</code></td><br>      </tr><br>      <tr><br>          <td>class对象</td><br>          <td>类对象</td><br>          <td> <code>synchronized (SynchronizedDemo.class){......}</code></td><br>      </tr><br>      <tr><br>          <td>任意实例对象Object</td><br>          <td>实例对象Object</td><br>          <td> <code>String lock; synchronized (lock){......}</code></td><br>      </tr><br><br>  </table>
-
-</li>
+<li>synchronized:<br>  该方法是无法继承的，它只会锁定一个对象，而非某一段程序块<br>  当没有明确对象作为对象锁时，可以创建一个instance对象，充当对象锁。可以采用创建一个零字节的数组：<br>  <code>private byte[] lock = new byte[0];</code></li>
 </ul>
+
+	<table>
+		<tr>
+			<td>分类</td>
+			<td>具体分类</td>
+			<td>被锁对象</td>
+			<td>举例</td>
+		</tr>
+		<tr>
+			<td rowspan="2">方法</td>
+			<td>实例方法</td>
+			<td>类的实例对象</td>
+			<td> `public synchronized void method(){......}`</td>
+		</tr>
+		<tr>
+			<td>静态方法</td>
+			<td>类对象</td>
+			<td> `public static synchronized void method(){......}`</td>
+		</tr>
+		<tr>
+			<td rowspan="3">代码块</td>
+			<td>实例对象</td>
+			<td>类的实例对象</td>
+			<td> `synchronized (this){......}`</td>
+		</tr>
+		<tr>
+			<td>class对象</td>
+			<td>类对象</td>
+			<td> `synchronized (SynchronizedDemo.class){......}`</td>
+		</tr>
+		<tr>
+			<td>任意实例对象Object</td>
+			<td>实例对象Object</td>
+			<td> `String lock; synchronized (lock){......}`</td>
+		</tr>
+	</table>
+
 <hr>
 <ul>
 <li>wait、notify在三台打印机打印ABC上的运用</li>
